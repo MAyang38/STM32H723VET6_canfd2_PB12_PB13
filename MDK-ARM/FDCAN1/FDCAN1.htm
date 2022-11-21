@@ -3,7 +3,7 @@
 <title>Static Call Graph - [FDCAN1\FDCAN1.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image FDCAN1\FDCAN1.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060061: Last Updated: Mon Nov 21 20:18:22 2022
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060061: Last Updated: Mon Nov 21 20:43:38 2022
 <BR><P>
 <H3>Maximum Stack Usage =        504 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -824,10 +824,11 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32h723xx.o(RESET)
 </UL>
-<P><STRONG><a name="[91]"></a>FDCAN3_IT0_IRQHandler</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, stm32h7xx_it.o(i.FDCAN3_IT0_IRQHandler))
-<BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = FDCAN3_IT0_IRQHandler &rArr; HAL_FDCAN_IRQHandler
+<P><STRONG><a name="[91]"></a>FDCAN3_IT0_IRQHandler</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, stm32h7xx_it.o(i.FDCAN3_IT0_IRQHandler))
+<BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = FDCAN3_IT0_IRQHandler &rArr; HAL_FDCAN_IRQHandler
 </UL>
 <BR>[Calls]<UL><LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_FDCAN_IRQHandler
+<LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_FDCAN_GetRxMessage
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32h723xx.o(RESET)
 </UL>
@@ -876,7 +877,8 @@ Global Symbols
 <P><STRONG><a name="[ad]"></a>HAL_FDCAN_GetRxMessage</STRONG> (Thumb, 400 bytes, Stack size 20 bytes, stm32h7xx_hal_fdcan.o(i.HAL_FDCAN_GetRxMessage))
 <BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = HAL_FDCAN_GetRxMessage
 </UL>
-<BR>[Called By]<UL><LI><a href="#[20]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FDCAN2_IT0_IRQHandler
+<BR>[Called By]<UL><LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FDCAN3_IT0_IRQHandler
+<LI><a href="#[20]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FDCAN2_IT0_IRQHandler
 </UL>
 
 <P><STRONG><a name="[b2]"></a>HAL_FDCAN_HighPriorityMessageCallback</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, stm32h7xx_hal_fdcan.o(i.HAL_FDCAN_HighPriorityMessageCallback))

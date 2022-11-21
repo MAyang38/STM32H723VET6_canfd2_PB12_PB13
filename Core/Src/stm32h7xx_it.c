@@ -224,6 +224,7 @@ void FDCAN3_IT0_IRQHandler(void)
   /* USER CODE END FDCAN3_IT0_IRQn 0 */
   HAL_FDCAN_IRQHandler(&hfdcan3);
   /* USER CODE BEGIN FDCAN3_IT0_IRQn 1 */
+  HAL_FDCAN_GetRxMessage(&hfdcan3, FDCAN_RX_FIFO0, &RxHeader, RxData);
 
   /* USER CODE END FDCAN3_IT0_IRQn 1 */
 }
